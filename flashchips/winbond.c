@@ -424,12 +424,13 @@
 		.name		= "W74M25JV",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
-		.model_id	= WINBOND_NEX_W25Q256_V,
+		.model_id	= WINBOND_NEX_W25Q256_W,
 		.total_size	= SIZE_32MiB,
 		.page_size	= 256,
 		/* supports SFDP */
 		/* OTP: 3X256B; read 0x48; write 0x42, erase 0x44, read ID 0x4B */
-		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_4BA | FEATURE_WRSR2,
+		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_4BA | FEATURE_WRSR2
+				  | FEATURE_WRSR3,
 		.tested		= TEST_UNTESTED,
 		.probe		= PROBE_SPI_RDID,
 		.probe_timing	= TIMING_ZERO,
@@ -470,6 +471,7 @@
 			.bp     = {{STATUS1, 2, RW}, {STATUS1, 3, RW}, {STATUS1, 4, RW}, {STATUS1, 5, RW}},
 			.tb     = {STATUS1, 6, RW},
 			.cmp    = {STATUS2, 6, RW},
+			.wps    = {STATUS3, 2, RW},
 		},
 		.decode_range	= DECODE_RANGE_SPI25,
 	},
@@ -586,7 +588,7 @@
 
 	{
 		.vendor		= "Winbond",
-		.name		= "W25Q256JW",
+		.name		= "W25Q256JW/W74M25JV",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
 		.model_id	= WINBOND_NEX_W25Q256_W,
@@ -643,7 +645,7 @@
 
 	{
 		.vendor		= "Winbond",
-		.name		= "W25R256JW",
+		.name		= "W25R256JW/W74M25JV",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
 		.model_id	= WINBOND_NEX_W25Q256_W,
