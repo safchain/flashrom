@@ -424,7 +424,7 @@
 		.name		= "W74M25JV",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
-		.model_id	= WINBOND_NEX_W25Q256_W,
+		.model_id	= WINBOND_NEX_W25Q256_V,
 		.total_size	= SIZE_32MiB,
 		.page_size	= 256,
 		/* supports SFDP */
@@ -588,7 +588,7 @@
 
 	{
 		.vendor		= "Winbond",
-		.name		= "W25Q256JW/W74M25JV",
+		.name		= "W25Q256JW",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
 		.model_id	= WINBOND_NEX_W25Q256_W,
@@ -645,7 +645,7 @@
 
 	{
 		.vendor		= "Winbond",
-		.name		= "W25R256JW/W74M25JV",
+		.name		= "W25R256JW",
 		.bustype	= BUS_SPI,
 		.manufacture_id	= WINBOND_NEX_ID,
 		.model_id	= WINBOND_NEX_W25Q256_W,
